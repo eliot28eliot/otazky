@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otázky</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; margin-top:50px;">
+
+<h1>Náhodná otázka</h1>
+<div id="question">Klikni na tlačidlo</div>
+
+<br><br>
+
+<button onclick="newQuestion()">Nová otázka</button>
+
+<script>
+const questions = [
+  "Aký je tvoj najväčší sen?",
+  "Čo by si robil keby si mal milión €?",
+  "Keby si mohol cestovať kamkoľvek, kam ideš?"
+];
+
+function newQuestion() {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  document.getElementById("question").innerText = questions[randomIndex];
+}
+</script>
+
+</body>
+</html>
+first version
